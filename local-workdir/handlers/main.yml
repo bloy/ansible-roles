@@ -1,0 +1,4 @@
+---
+- name: delete temporary workdir
+  local_action: file path={{local_workdir}} state=absent
+  run_once: true

@@ -1,0 +1,9 @@
+---
+- name: make temporary directory
+  local_action: command mktemp -d
+  register: mktemp
+  run_once: true
+  notify: delete temporary workdir
+
+- name: Register tempdir
+  set_fact: local_workdir={{ mktemp.stdout }}
