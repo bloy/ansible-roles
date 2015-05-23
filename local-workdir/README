@@ -1,0 +1,8 @@
+Create a local workdir that is deleted by the end of the playbook.
+
+Uses mktemp to create a local temporary directory.
+
+The directory name will be available in the fact 'local_workdir'
+
+No handlers should depend on the temporary directory, as it is auto deleted in
+a handler

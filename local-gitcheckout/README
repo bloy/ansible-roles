@@ -1,0 +1,10 @@
+Role to check out a specified git repository locally, for further local actions
+(eg, asset minification before deploying a web app)
+
+The checkout parent directory will be available in the fact checkout_dir
+
+Example usage in a playbook:
+
+---
+  roles:
+    - { role: local-gitcheckout, repo: "REPO GIT URL", version: "BRANCH NAME" }
