@@ -1,0 +1,11 @@
+---
+- name: checkout source from {{ repo }}
+  run_once: true
+  local_action: >
+    git
+    repo={{repo}}
+    version={{version}}
+    dest={{local_workdir}}
+
+- name: register checkout_dir
+  set_fact: checkout_dir={{local_workdir}}
