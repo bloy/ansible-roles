@@ -1,0 +1,14 @@
+---
+- name: add nginx packages
+  apt:
+    name: nginx-full
+    state: latest
+    default-release: "{{ansible_distribution_release}}-backports"
+
+- name: Add web firewall rules
+  ufw:
+    rule: allow
+    name: '{{ item }}'
+  with_items:
+    - WWW
+    - WWW Secure

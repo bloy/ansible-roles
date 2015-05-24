@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Mike Bloy
+  description: Install nginx
+  platforms:
+    - name: Debian
+      versions:
+        - wheezy
+        - jessie
+  categories:
+    - web
+    - system
+dependencies:
+  - { role: ufw }
