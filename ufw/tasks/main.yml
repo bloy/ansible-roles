@@ -1,0 +1,9 @@
+---
+- name: Install ufw
+  apt: pkg=ufw state=installed
+
+- name: Set up basic ufw rules
+  ufw: rule=allow name=OpenSSH
+
+- name: Enable UFW
+  ufw: state=enabled policy=deny
